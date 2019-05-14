@@ -86,6 +86,7 @@ func Test_updateHandler(t *testing.T) {
 						Status:  service.ALIVE,
 					},
 					PreviousStatus: service.TOMBSTONE,
+					Time:           evtState.LastChanged,
 				},
 			}
 
@@ -120,6 +121,7 @@ func Test_updateHandler(t *testing.T) {
 						Status:  service.ALIVE,
 					},
 					PreviousStatus: service.TOMBSTONE,
+					Time:           evtState.LastChanged,
 				},
 			}
 
@@ -178,6 +180,7 @@ func Test_updateHandler(t *testing.T) {
 						Status:  service.ALIVE,
 					},
 					PreviousStatus: service.TOMBSTONE,
+					Time:           evtState.LastChanged,
 				},
 			}
 
@@ -207,6 +210,7 @@ func Test_updateHandler(t *testing.T) {
 						Status:  service.ALIVE,
 					},
 					PreviousStatus: service.TOMBSTONE,
+					Time:           evtState.LastChanged,
 				},
 			}
 
@@ -239,6 +243,7 @@ func Test_updateHandler(t *testing.T) {
 						Status:  service.DRAINING,
 					},
 					PreviousStatus: service.ALIVE,
+					Time:           evtState.LastChanged,
 				},
 			}
 

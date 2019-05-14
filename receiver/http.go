@@ -44,7 +44,7 @@ func UpdateHandler(response http.ResponseWriter, req *http.Request, rcvr *Receiv
 	rcvr.StateLock.Lock()
 	defer rcvr.StateLock.Unlock()
 
-	if rcvr.CurrentState == nil || rcvr.CurrentState.LastChanged.Before(evt.State.LastChanged) {
+	if rcvr.CurrentState == nil || rcvr.CurrentState.LastChanged.Before(evt.ChangeEvent.Time) {
 		rcvr.CurrentState = evt.State
 		rcvr.LastSvcChanged = &evt.ChangeEvent.Service
 
